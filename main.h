@@ -1,10 +1,16 @@
+#include <stdarg.h>
 /**
- * struct check_fmt - create a stucture to check list format handlers
- * @get_fmt - char input to compare with
- * @p - address pointer for the function
+ * struct print_st - create a stucture to check list format handlers
+ * @typ - char input to compare with
+ * @fmt - address pointer for the function
  */
-typedef struct check_fmt
+typedef struct print_st
 {
-	char get_fmt;
-	int (*p)(va_list);
-}fmt_checker;
+	char *typ;
+	int (*fmt)(va_list);
+}print_type;
+
+int _putchar(char c);
+int _printf(const char *format, ...);
+int print_c(va_list c);
+int print_s(va_list s);
