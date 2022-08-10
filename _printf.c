@@ -3,7 +3,7 @@
 #include "main.h"
 /**
  * format_func - Checks for right function for specific format
- * a - input from format
+ * format - input from format
  * Return function for a specific format
  */
 int (*check_spec(const char *format))(va_list)
